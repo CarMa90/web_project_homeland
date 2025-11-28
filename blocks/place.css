@@ -1,0 +1,133 @@
+.place {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: auto 477px auto;
+  gap: 48px 40px;
+  justify-items: start;
+}
+
+.place__title {
+  margin: 0;
+  font-family: "inter-black";
+  font-size: 72px;
+  line-height: 76px;
+  align-self: self-end;
+}
+
+.place__website {
+  align-self: self-end;
+}
+
+.place__url-heading {
+  margin: 0;
+  padding: 0 0 8px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 12%;
+  color: #aaa;
+}
+
+.place__artist {
+  margin: 0;
+  padding: 0 8px 0 0;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.place__image-content {
+  position: relative;
+  align-self: center;
+}
+
+.place__image {
+  filter: drop-shadow(10px 10px 25px #00000080);
+  width: 100%;
+  object-fit: cover;
+  align-self: center;
+}
+
+.place__image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.place__image-overlay:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.place__description {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0 8px 0 0;
+}
+
+.place__paragraph {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.63;
+}
+
+.place__button {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  background-image: linear-gradient(to right, #0278fe, #003a7b);
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+  padding: 13px 20px;
+  border-radius: 4px;
+  align-self: self-start;
+}
+
+.place__button:hover {
+  background-image: linear-gradient(to right, #0278fe40, #003a7b40);
+}
+
+@media screen and (max-width: 1024px) {
+  .place {
+    grid-template-rows: auto 350px auto;
+    gap: 48px 28px;
+  }
+
+  .place__title {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  .place__paragraph {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 682px) {
+  .place {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .place__title {
+    padding-left: 16px;
+    align-self: baseline;
+  }
+
+  .place__website {
+    padding-left: 16px;
+    align-self: baseline;
+  }
+
+  .place__description {
+    padding: 0 16px;
+  }
+
+  .place__button {
+    align-self: center;
+  }
+}
