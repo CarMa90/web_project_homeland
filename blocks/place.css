@@ -1,7 +1,7 @@
 .place {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-template-rows: auto 477px auto;
+  grid-template-rows: auto auto 1fr;
   gap: 48px 40px;
   justify-items: start;
 }
